@@ -25,14 +25,6 @@ const Home = () => {
                                 A novel is a long fictional story with deep characters and themes, often in different genres. Examples include 1984 and Pride and Prejudice.</p>
                         </div>
                     </Link>
-
-                    <Link to='/category/Thriller' >
-                        <div className='h-[200px] sm:h-[220px] text-center space-y-3 card hover:scale-105 transition-all bg-gray-200  shadow-xl'>
-                            <h1 className=' text-2xl font-bold'> Thriller</h1>
-                            <p className=''>
-                                A thriller is a suspenseful genre focused on excitement, danger, and unexpected twists. Examples include The Girl with the Dragon Tattoo and The Silence of the Lambs.</p>
-                        </div>
-                    </Link>
  
                     <Link to='/category/History'  >
                         <div className='h-[200px] sm:h-[220px]  text-center space-y-3 card hover:scale-105 transition-all bg-gray-200  shadow-xl'>

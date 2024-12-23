@@ -67,7 +67,7 @@ const AddBooks = () => {
                                 <option value="e.g., Novel">e.g., Novel</option>
                                 <option value="History">History</option>
                                 <option value="Drama">Drama</option>
-                                <option value=" Sci-Fi"> Sci-Fi</option>
+                                <option value="Sci-Fi"> Sci-Fi</option>
                             </select>
                         </div>
                         <div className="form-control">
