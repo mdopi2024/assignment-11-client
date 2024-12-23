@@ -11,6 +11,7 @@ import AddBooks from "../pages/AddBooks/AddBooks";
 import BorrowBooks from "../pages/BorrowBooks/BorrowBooks";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 import Update from "../pages/Update/Update";
+import CategoryPage from "../pages/CategoryPage/CategoryPage";
 
 const router = createBrowserRouter([
     {
@@ -47,6 +48,10 @@ const router = createBrowserRouter([
           path:'/update/:id',
           element:<PrivateRoute><Update></Update></PrivateRoute>,
           loader:({params})=>fetch(`${import.meta.env.VITE_URL}/books/${params.id}`)
+        },
+        {
+          path:'/category/:category',
+          element:<PrivateRoute><CategoryPage></CategoryPage></PrivateRoute>,
         },
       
       ]
