@@ -5,7 +5,9 @@ const Home = () => {
     return (
         <div>
             i am home 
-            <Sweeper></Sweeper>
+           <div className='mx-5 md:mx-10 '>
+           <Sweeper></Sweeper>
+           </div>
         </div>
     );
 };
