@@ -46,7 +46,7 @@ const NavBar = () => {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                            className="menu menu-sm dropdown-content bg-gray-300 text-black font-semibold rounded-box z-50 mt-3 w-52 p-2 shadow">
                             {
                                 links
                             }
@@ -77,7 +77,7 @@ const NavBar = () => {
                                     </div>
                                     <ul 
                                         tabIndex={0}
-                                        className="menu menu-sm dropdown-content bg-gray-100 rounded-box z-[1] mt-3 w-52 p-2 shadow hidden group-hover:block absolute top-7 ">
+                                        className="menu menu-sm dropdown-content z-50 bg-gray-400 text-black rounded-box  mt-3 w-52 p-2 shadow hidden group-hover:block absolute top-7 ">
                                         <li className=' font-bold text-[17px] text-center text-black rounded-lg'>{user?.displayName}</li>
                                         <li className='border text-black rounded-lg font-bold mt-3 '><button onClick={handleSignOut} className='text-center  block'>Sign Out</button></li>
                                     </ul>

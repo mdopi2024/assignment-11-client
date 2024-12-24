@@ -2,6 +2,7 @@ import React from 'react';
 import Sweeper from '../../components/Sweeper/Sweeper';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import AboutUs from '../../components/AboutUs/AboutUs';
 
 const Home = () => {
 
@@ -53,6 +54,12 @@ const Home = () => {
                 </div>
 
             </div>
+
+
+         <div className='my-7'>
+            <h1 className='text-center text-3xl md:text-4xl  text-blue-500 font-bold'>Know more about us</h1>
+            <AboutUs></AboutUs>
+         </div>
         </div>
     );
 };
