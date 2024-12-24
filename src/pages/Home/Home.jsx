@@ -3,6 +3,7 @@ import Sweeper from '../../components/Sweeper/Sweeper';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 import AboutUs from '../../components/AboutUs/AboutUs';
+import UserReview from '../../components/UserReview/UserReview';
 
 const Home = () => {
 
@@ -60,6 +61,12 @@ const Home = () => {
             <h1 className='text-center text-3xl md:text-4xl  text-blue-500 font-bold'>Know more about us</h1>
             <AboutUs></AboutUs>
          </div>
+
+         <div>
+         <h1 className='text-center text-3xl md:text-4xl  text-blue-500 font-bold'>What Our Users Say</h1>
+            <UserReview></UserReview>
+         </div>
+
         </div>
     );
 };
