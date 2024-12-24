@@ -14,7 +14,8 @@ const BorrowModal = ({ data }) => {
         const return_date=form.return_date.value
         const email = user?.email;
         const userName =user?.displayName;
-       const modalData ={return_date,email,userName,photo,name,category,}
+        const bookId=_id
+       const modalData ={return_date,email,userName,photo,name,category,bookId}
        try{
         const {data}=await axios.post(`${import.meta.env.VITE_URL}/borrows`,modalData)
         document.getElementById('my_modal_1').close()
