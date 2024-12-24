@@ -1,19 +1,28 @@
 import React from 'react';
 import useAuth from '../../hooks/useAuth';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const BorrowModal = ({ data }) => {
     const { author_name, short_des, photo, quantity, name, _id, category, rating, description } = data || {}
      
     const {user}=useAuth()
 
-    const handleModal =e=>{
+    const handleModal =async e=>{
         e.preventDefault();
         const form = e.target;
         const return_date=form.return_date.value
         const email = user?.email;
         const userName =user?.displayName;
        const modalData ={return_date,email,userName,photo,name,category,}
-       console.log(modalData)
+       try{
+        const {data}=await axios.post(`${import.meta.env.VITE_URL}/borrows`,modalData)
+        document.getElementById('my_modal_1').close()
+        toast.success('You borrowed book successfully')
+       }
+       catch(error){
+        toast.error(error.message)
+       }
     }
     return (
 
@@ -43,7 +52,8 @@ const BorrowModal = ({ data }) => {
 
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn btn-primary">Submit</button>
+                                <button
+                                 className="btn bg-green-500 hover:bg-green-600">Submit</button>
                             </div>
                         </form>
                     </div>

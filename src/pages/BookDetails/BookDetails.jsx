@@ -25,7 +25,9 @@ const BookDetails = () => {
                         <p className="py-1 font-bold">Short Description : <span className='font-semibold'>{short_des}</span></p>
                         <p className="py-1 font-bold"> Description : <span className='font-semibold'>{description}</span></p>
                         <div className='flex justify-end  items-center py-2'>
-                            <button onClick={() => document.getElementById('my_modal_1').showModal()} className="btn px-3 font-bold bg-green-500 hover:bg-green-600">Borrow Book</button>
+                            <button
+                            disabled={quantity === 0} 
+                            onClick={() => document.getElementById('my_modal_1').showModal()} className="btn px-3 font-bold bg-green-500 hover:bg-green-600">Borrow Book</button>
                         </div>
                     </div>
                 </div>
