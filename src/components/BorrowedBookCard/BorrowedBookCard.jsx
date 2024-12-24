@@ -5,7 +5,9 @@ import { collapseToast } from 'react-toastify';
 import Swal from 'sweetalert2';
 
 const BorrowedBookCard = ({ book, books, setBooks }) => {
-    const { photo, category, currentDate, return_date, name, _id } = book
+    console.log(book)
+    const { photo, category, currentDate, return_date, name, _id,bookId } = book
+    const data= {id:bookId}
 
     const retrunBook = id => {
         Swal.fire({
@@ -19,7 +21,7 @@ const BorrowedBookCard = ({ book, books, setBooks }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                axios.delete(`${import.meta.env.VITE_URL}/delete_book/${id}`)
+                axios.delete(`${import.meta.env.VITE_URL}/delete_book/${id}`, {data})
                     .then(data => {
                         if (data.data.deletedCount) {
                             Swal.fire({
