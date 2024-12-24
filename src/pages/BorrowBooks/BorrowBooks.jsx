@@ -5,7 +5,6 @@ import BorrowedBookCard from '../../components/BorrowedBookCard/BorrowedBookCard
 
 const BorrowBooks = () => {
     const [books,setBooks]=useState([])
-    console.log(books)
     const {user}=useAuth()
     useEffect(()=>{
         try{
@@ -19,9 +18,9 @@ const BorrowBooks = () => {
     return (
         <div>
             <h1 className='text-center text-3xl md:text-4xl font-bold my-8'>All Borrowed Books</h1>
-             <div>
+             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mx-10'>
                 {
-                    books.map(book=><BorrowedBookCard key={book._id} book={book}></BorrowedBookCard>)
+                    books.map(book=><BorrowedBookCard key={book._id} book={book} books={books} setBooks={setBooks}></BorrowedBookCard>)
                 }
              </div>
         </div>
