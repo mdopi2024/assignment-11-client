@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { toast } from 'react-toastify';
 import useAxiosSucure from '../../hooks/useAixosSecure/useAxiosSucure';
+import DynamicTitle from '../../components/DynamicTitle/DynamicTitle';
 
 const AddBooks = () => {
      
@@ -22,6 +23,7 @@ const AddBooks = () => {
 
     return (
         <div className='flex justify-center items-center my-6'>
+            <DynamicTitle title='Add Books'></DynamicTitle>
             <div className="card  w-full max-w-lg  shrink-0 shadow-2xl">
                 <div className='text-center text-3xl md:text-4xl font-bold'>Add Books</div>
                 <form onSubmit={handlForm} className="card-body">

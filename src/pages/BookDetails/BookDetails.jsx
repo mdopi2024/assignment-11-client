@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import BorrowModal from '../../components/BorrowModal/BorrowModal';
+import DynamicTitle from '../../components/DynamicTitle/DynamicTitle';
 
 const BookDetails = () => {
     const data = useLoaderData()
@@ -8,7 +9,7 @@ const BookDetails = () => {
     const { author_name, short_des, photo, quantity, name, _id, category, rating, description } = data || {}
     return (
         <div className=''>
-            
+            <DynamicTitle title='Details'></DynamicTitle>
             <h1 className='text-center font-bold md:text-4xl text-3xl my-8'>Book details about {name}</h1>
             <div className="hero md:w-2/3 mx-auto border rounded-md my-12">
                 <div className="hero-content gap-8 flex-col lg:flex-row">

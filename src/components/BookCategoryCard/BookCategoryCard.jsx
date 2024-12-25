@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import ReactStars from "react-rating-stars-component";
+import DynamicTitle from '../DynamicTitle/DynamicTitle';
 
 
 
@@ -18,6 +19,7 @@ const BookCategoryCard = ({ book }) => {
      
     return (
         <div className="card card-compact bg-base-100 hover:scale-105   shadow-xl transition-all ">
+        <DynamicTitle title='Book Category'></DynamicTitle>
         <figure>
           <img
           className='h-[180px] object-cover w-full'

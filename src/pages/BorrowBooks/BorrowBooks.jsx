@@ -3,6 +3,7 @@ import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
 import BorrowedBookCard from '../../components/BorrowedBookCard/BorrowedBookCard';
 import useAxiosSucure from '../../hooks/useAixosSecure/useAxiosSucure';
+import DynamicTitle from '../../components/DynamicTitle/DynamicTitle';
 
 const BorrowBooks = () => {
     const [books,setBooks]=useState([])
@@ -19,6 +20,7 @@ const BorrowBooks = () => {
     },[user.email])
     return (
         <div>
+            <DynamicTitle title='Borrowed Book'></DynamicTitle>
             <h1 className='text-center text-3xl md:text-4xl font-bold my-8'>All Borrowed Books</h1>
              <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5 mx-10'>
                 {

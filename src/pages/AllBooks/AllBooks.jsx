@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Bookscard from '../../components/BooksCard/Bookscard';
 import useAxiosSucure from '../../hooks/useAixosSecure/useAxiosSucure';
+import DynamicTitle from '../../components/DynamicTitle/DynamicTitle';
 
 const AllBooks = () => {
     const [allBooks,setAllbooks]= useState([])
@@ -19,6 +20,7 @@ const AllBooks = () => {
     
     return (
         <div>
+          <div><DynamicTitle title='All Books'></DynamicTitle></div>
           <div className='flex justify-end items-center px-10'>
             <button onClick={handleAbailableBook} className='btn border-2 border-green-500 hover:bg-green-600 font-bold mt-5 bg-white '>Show Available Books </button>
           </div>

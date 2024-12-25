@@ -4,6 +4,7 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import AboutUs from '../../components/AboutUs/AboutUs';
 import UserReview from '../../components/UserReview/UserReview';
+import DynamicTitle from '../../components/DynamicTitle/DynamicTitle';
 
 const Home = () => {
 
@@ -11,6 +12,9 @@ const Home = () => {
 
     return (
         <div>
+            <div>
+                <DynamicTitle title='Home'></DynamicTitle>
+            </div>
 
             <div className='mx-5 md:mx-10 my-10'>
                 <Sweeper></Sweeper>
