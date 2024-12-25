@@ -1,6 +1,7 @@
 import React, { createContext, useEffect, useState } from 'react';
 import { createUserWithEmailAndPassword, getAuth, GoogleAuthProvider, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 import { app } from '../firebase/firebase.config';
+import axios from 'axios';
 
 
 
@@ -49,9 +50,17 @@ const AuthProvider = ({ children }) => {
 
     // observer user
     useEffect(()=>{
-        const unSubcribe= onAuthStateChanged(auth,currentUser=>{
+        const unSubcribe= onAuthStateChanged(auth,async currentUser=>{
            setUser(currentUser)
            setLoader(false)
+
+           if(currentUser?.email){
+             const{data}=await axios.post(`${import.meta.env.VITE_URL}/jwt`,{email:currentUser?.email},{withCredentials:true})
+                
+           }
+           else{
+            const {data}= await axios.get(`${import.meta.env.VITE_URL}/logout`,{withCredentials:true})
+           }
         })
         return ()=> unSubcribe()
     },[])

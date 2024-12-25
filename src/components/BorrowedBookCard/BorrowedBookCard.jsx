@@ -5,7 +5,6 @@ import { collapseToast } from 'react-toastify';
 import Swal from 'sweetalert2';
 
 const BorrowedBookCard = ({ book, books, setBooks }) => {
-    console.log(book)
     const { photo, category, currentDate, return_date, name, _id,bookId } = book
     const data= {id:bookId}
 

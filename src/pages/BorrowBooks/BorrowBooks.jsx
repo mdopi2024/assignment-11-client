@@ -8,7 +8,7 @@ const BorrowBooks = () => {
     const {user}=useAuth()
     useEffect(()=>{
         try{
-            axios.get(`${import.meta.env.VITE_URL}/borrow?email=${user.email}`)
+            axios.get(`${import.meta.env.VITE_URL}/borrow?email=${user.email}`,{withCredentials:true})
             .then(data=>{
                 setBooks(data.data)
             })
