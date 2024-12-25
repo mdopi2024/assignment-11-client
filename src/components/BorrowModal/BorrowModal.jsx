@@ -23,7 +23,7 @@ const BorrowModal = ({ data }) => {
         toast.success('You borrowed book successfully')
        }
        catch(error){
-        toast.error(error.message)
+        toast.error(error?.response?.data)
        }
     }
     return (
