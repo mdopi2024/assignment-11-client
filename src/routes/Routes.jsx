@@ -35,7 +35,7 @@ const router = createBrowserRouter([
         {
           path:'/allbooks',
           element:<PrivateRoute><AllBooks></AllBooks></PrivateRoute>,
-          loader:()=>fetch(`${import.meta.env.VITE_URL}/books`)
+          // loader:()=>fetch(`${import.meta.env.VITE_URL}/books`)
         },
         {
           path:'/addbooks',

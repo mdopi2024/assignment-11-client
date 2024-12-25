@@ -1,9 +1,16 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
 import Bookscard from '../../components/BooksCard/Bookscard';
+import useAxiosSucure from '../../hooks/useAixosSecure/useAxiosSucure';
 
 const AllBooks = () => {
-    const allBooks = useLoaderData()
+    const [allBooks,setAllbooks]= useState([])
+    const axiosSucure=useAxiosSucure()
+    useEffect(()=>{
+     axiosSucure.get(`${import.meta.env.VITE_URL}/books`)
+      .then(data=>{
+        setAllbooks(data.data)
+      })
+    },[])
     
     return (
         <div>
