@@ -3,7 +3,7 @@ import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
-const BorrowModal = ({ data }) => {
+const BorrowModal = ({ data,setData }) => {
     const { author_name, short_des, photo, quantity, name, _id, category, rating, description } = data || {}
      
     const {user}=useAuth()
@@ -19,8 +19,9 @@ const BorrowModal = ({ data }) => {
        const modalData ={return_date,currentDate,email,userName,photo,name,category,bookId}
        try{
         const {data}=await axios.post(`${import.meta.env.VITE_URL}/borrows`,modalData)
+        setData(data)
         document.getElementById('my_modal_1').close()
-        toast.success('You borrowed book successfully')
+        toast.success('You have borrowed this book successfully')
        }
        catch(error){
         toast.error(error?.response?.data)

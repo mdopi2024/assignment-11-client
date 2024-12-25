@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import BorrowModal from '../../components/BorrowModal/BorrowModal';
 import DynamicTitle from '../../components/DynamicTitle/DynamicTitle';
 
 const BookDetails = () => {
-    const data = useLoaderData()
+    const getData = useLoaderData()
+    const [data,setData]=useState(getData)
+
 
     const { author_name, short_des, photo, quantity, name, _id, category, rating, description } = data || {}
     return (
@@ -33,7 +35,7 @@ const BookDetails = () => {
                     </div>
                 </div>
                 <div className='mt-4'>
-                <BorrowModal data={data}></BorrowModal>
+                <BorrowModal data={data} setData={setData}></BorrowModal>
             </div>
             </div>
         </div>
