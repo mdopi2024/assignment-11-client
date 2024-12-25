@@ -1,16 +1,18 @@
 import axios from 'axios';
 import React from 'react';
 import { toast } from 'react-toastify';
+import useAxiosSucure from '../../hooks/useAixosSecure/useAxiosSucure';
 
 const AddBooks = () => {
-
+     
+    const axiosSucure=useAxiosSucure()
     const handlForm=async e=>{
         e.preventDefault();
         const forData = new FormData(e.target);
         const data= Object.fromEntries(forData.entries())
         
         try{
-            const {data:datas}=await axios.post(`${import.meta.env.VITE_URL}/add_books`,data)
+            const {data:datas}=await axiosSucure.post(`/add_books`,data)
             toast.success('Book succefully added')
             e.target.reset()
         }catch(error){toast.error(error)}
