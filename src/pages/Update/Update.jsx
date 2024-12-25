@@ -2,6 +2,7 @@ import axios from 'axios';
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { toast } from 'react-toastify';
+import DynamicTitle from '../../components/DynamicTitle/DynamicTitle';
 
 
 const Update = () => {
@@ -24,6 +25,7 @@ const Update = () => {
     }
     return (
         <div className='flex justify-center items-center my-16'>
+            <DynamicTitle title='Update'></DynamicTitle>
             <div className="card  w-full max-w-lg  shrink-0 shadow-2xl">
                 <div className='text-center text-3xl md:text-4xl font-bold'>Update Book</div>
                 <form onSubmit={handleForm}  className="card-body">
