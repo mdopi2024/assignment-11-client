@@ -2,13 +2,15 @@ import React, { useEffect, useState } from 'react';
 import useAuth from '../../hooks/useAuth';
 import axios from 'axios';
 import BorrowedBookCard from '../../components/BorrowedBookCard/BorrowedBookCard';
+import useAxiosSucure from '../../hooks/useAixosSecure/useAxiosSucure';
 
 const BorrowBooks = () => {
     const [books,setBooks]=useState([])
     const {user}=useAuth()
+    const aixosSucure= useAxiosSucure()
     useEffect(()=>{
         try{
-            axios.get(`${import.meta.env.VITE_URL}/borrow?email=${user.email}`,{withCredentials:true})
+            aixosSucure.get(`/borrow?email=${user.email}`)
             .then(data=>{
                 setBooks(data.data)
             })
