@@ -11,6 +11,7 @@ const LogIn = () => {
     const {signInWithEmail}=useAuth()
     const navigate=useNavigate()
     const location= useLocation()
+    console.log(location)
     
     
 
@@ -21,7 +22,7 @@ const LogIn = () => {
        signInWithEmail(data.email,data.password)
        .then(res=>{
         toast.success('succefully login')
-        navigate(location?.state? location.state: '/')
+        navigate( location?.state || '/')
        }).catch(error=>{
         toast.error(error.code)
         console.log(error)
