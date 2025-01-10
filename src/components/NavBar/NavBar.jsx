@@ -26,7 +26,7 @@ const NavBar = () => {
 
     }
     return (
-        <div>
+        <div className='fixed top-0 w-full z-30'>
             <div className="navbar flex justify-center items-center bg-blue-900 text-white px-10">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -70,9 +70,9 @@ const NavBar = () => {
                                 <div className="flex flex-col items-end dropdown-end group relative">
                                     <div tabIndex={0} role="button" className="btn  btn-ghost btn-circle avatar ">
                                         <div className="w-10 rounded-full">
-                                            <img
-                                                alt="Tailwind CSS Navbar component"
-                                                src={user?.photoURL} />
+                                            {user && <img
+                                                alt="user Profile picture"
+                                                src={user?.photoUR} />}
                                         </div>
                                     </div>
                                     <ul 

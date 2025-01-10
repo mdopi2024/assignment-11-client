@@ -5,8 +5,8 @@ import Footer from '../components/Footer/Footer';
 
 const MainLayout = () => {
     return (
-        <div>
-            <div>
+        <div className=''>
+            <div className='mb-[81px]'>
                 <NavBar></NavBar>
             </div>
               
