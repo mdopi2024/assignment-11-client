@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import AboutUs from '../../components/AboutUs/AboutUs';
 import UserReview from '../../components/UserReview/UserReview';
 import DynamicTitle from '../../components/DynamicTitle/DynamicTitle';
+import RecomendedBooks from '../../components/RecomendedBooks/RecomendedBooks';
 
 const Home = () => {
 
@@ -59,6 +60,9 @@ const Home = () => {
                 </div>
 
             </div>
+
+            {/* recomended books */}
+            <RecomendedBooks></RecomendedBooks>
 
 
          <div className='my-7'>

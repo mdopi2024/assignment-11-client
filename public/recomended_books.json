@@ -1,0 +1,66 @@
+[
+  {
+    "title": "The Secrets of the Universe",
+    "author": "Jane Harper",
+    "genre": "Science Fiction",
+    "rating": 4.8,
+    "description": "A thrilling journey through space and time, uncovering the mysteries of the cosmos.",
+    "imageUrl": "https://m.media-amazon.com/images/I/91atdQwwv3L._SL1500_.jpg"
+  },
+  {
+    "title": "Mastering the Art of Leadership",
+    "author": "John Maxwell",
+    "genre": "Self-help",
+    "rating": 4.7,
+    "description": "A comprehensive guide to becoming an inspiring and effective leader.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUm_YckmLxahTrAfn_sjE3uKHVDX22FWODug&s"
+  },
+  {
+    "title": "Echoes of the Past",
+    "author": "Sarah Collins",
+    "genre": "Historical Fiction",
+    "rating": 4.5,
+    "description": "A poignant tale of love and resilience during World War II.",
+    "imageUrl": "https://m.media-amazon.com/images/I/71NpF8Vw7tL._AC_UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "Code Like a Pro",
+    "author": "Alex Bennett",
+    "genre": "Technology",
+    "rating": 4.9,
+    "description": "An essential resource for developers looking to level up their coding skills.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRr6pu8PosIX5AYjebP_37P4B_1a4RIJA7d4Q&s"
+  },
+  {
+    "title": "Wonders of the Natural World",
+    "author": "Emma Green",
+    "genre": "Travel & Adventure",
+    "rating": 4.6,
+    "description": "Explore the breathtaking beauty of Earth's most stunning landscapes.",
+    "imageUrl": "https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1699348699i/12506293.jpg"
+  },
+  {
+    "title": "The Mystery of Hollow Creek",
+    "author": "Daniel Gray",
+    "genre": "Mystery & Thriller",
+    "rating": 4.4,
+    "description": "Dive into a small-town mystery filled with twists and turns.",
+    "imageUrl": "https://m.media-amazon.com/images/I/8198mPiM4HL._UF1000,1000_QL80_.jpg"
+  },
+  {
+    "title": "Cooking Made Simple",
+    "author": "Laura Martin",
+    "genre": "Cooking",
+    "rating": 4.3,
+    "description": "Easy-to-follow recipes for delicious meals, perfect for beginners and pros alike.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoyGSwuxCpmXK3atxshqjHZS4xDjPGNusQCA&s"
+  },
+  {
+    "title": "The Art of Mindfulness",
+    "author": "Sophia Lane",
+    "genre": "Wellness",
+    "rating": 4.7,
+    "description": "A step-by-step guide to achieving peace and mindfulness in daily life.",
+    "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-qAQ1sAtaRQMVCQ7sJgO2ZHDAYCIY_dzf5A&s"
+  }
+]
