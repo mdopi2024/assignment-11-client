@@ -16,7 +16,7 @@ const Home = () => {
                 <DynamicTitle title='Home'></DynamicTitle>
             </div>
 
-            <div className='mx-5 md:mx-10 my-10'>
+            <div className='  my-10'>
                 <Sweeper></Sweeper>
             </div>
             <div className='my-10 mx-4 md:mx-10'>
