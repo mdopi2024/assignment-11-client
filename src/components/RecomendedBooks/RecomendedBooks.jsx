@@ -10,7 +10,7 @@ const RecomendedBooks = () => {
     },[])
     return (
         <div>
-            <h1 className='text-center text-3xl md:text-4xl  text-blue-500 font-bold'> Popular or Recommended Books Section</h1>
+            <h1 className='text-center text-3xl md:text-4xl  text-blue-500 font-bold'> Popular or Recommended Books </h1>
            <div className='grid grid-cols-1 md:grid-cols-4 gap-8  mt-12 '>
            {
              books?.map((book, indx)=><RecomendedBookCard key={indx} book={book}></RecomendedBookCard>)
